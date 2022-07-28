@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="com.project.utilities.extentreport"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test2(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.project.test.Test_logintest_002">
+      <class name="com.project.test.Test_myinfo_001">
         <methods>
+          <include name="myinfo"/>
           <include name="setup"/>
-          <include name="logintest" invocation-numbers="1 3"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.project.test.Test_logintest_002 -->
+      </class> <!-- com.project.test.Test_myinfo_001 -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

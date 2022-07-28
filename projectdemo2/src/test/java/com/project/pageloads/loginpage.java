@@ -32,8 +32,9 @@ public class loginpage extends baseclass {
 		pass.sendKeys(pas);
 	}
 	
-	public void button() {
+	public myinfo button() {
 		button.click();
+		return new myinfo();
 		
 	}
 	

@@ -24,7 +24,7 @@ public class extentreport implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		time= new SimpleDateFormat("yyyy.mm.dd.HH.mm.ss").format(new Date());
 		String name="Test-report"+time+".html";
-		repoter=new ExtentSparkReporter("C:\\Users\\akash\\eclipse-workspace\\projectdemo2\\test-output/"+name);
+		repoter=new ExtentSparkReporter("C:\\Users\\akash\\git\\mystore\\projectdemo2\\test-output/"+name);
 		extent=new ExtentReports();
 
 		extent.attachReporter(repoter);

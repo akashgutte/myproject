@@ -12,7 +12,7 @@ public class readconfig {
 
 	public readconfig() {
 		try {		
-			InputStream input=new FileInputStream("C:\\Users\\akash\\eclipse-workspace\\projectdemo2\\configuration\\config.properties");
+			InputStream input=new FileInputStream("C:\\Users\\akash\\git\\mystore\\projectdemo2\\configuration\\config.properties");
 			prop=new Properties();
 			prop.load(input);
 		} catch (Exception e) {			

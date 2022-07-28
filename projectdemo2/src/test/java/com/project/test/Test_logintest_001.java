@@ -13,10 +13,10 @@ public class Test_logintest_001 extends baseclass {
 		log=new loginpage();
 		log.user(username);
 		log.pass(password);
-		log.button();
-		logger.info("successfully login");
+		log.button();		
 		boolean test=log.dashbord();
 		Assert.assertTrue(test);
+		logger.info("successfully login");
 		logger.info("dashbord verify successfull");
 	}
 }

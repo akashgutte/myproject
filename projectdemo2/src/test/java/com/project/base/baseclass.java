@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -55,8 +56,9 @@ public class baseclass {
 	}
 
 
-	@AfterClass
-	public void teardown() {
+	@AfterTest
+	public void teardown() throws Exception {
+		Thread.sleep(3000);
 		driver.close();
 	}
 	
@@ -65,7 +67,7 @@ public class baseclass {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File file=ts.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\akash\\eclipse-workspace\\projectdemo2\\screenshot/"+name+""+time+".png"));
+			FileUtils.copyFile(file, new File("C:\\Users\\akash\\git\\mystore\\projectdemo2\\screenshot/"+name+""+time+".png"));
 		} catch (Exception e) {
 	
 			e.printStackTrace();
