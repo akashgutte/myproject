@@ -4,6 +4,18 @@
   <listeners>
     <listener class-name="com.project.utilities.extentreport"/>
   </listeners>
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="browsername" value="chrome"/>
+    <classes>
+      <class name="com.project.test.Test_logintest_001">
+        <methods>
+          <include name="logintest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.project.test.Test_logintest_001 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
